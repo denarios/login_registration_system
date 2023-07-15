@@ -1,7 +1,9 @@
 import React ,{useState} from "react"
 import "./login.css"
 import axios from "axios"
+// import {useHistory} from "react-router-dom";
 const Login=()=>{
+    // const history=useHistory();
     const [user,setUser]=useState({
         email:"",
         password:""
@@ -15,7 +17,7 @@ const Login=()=>{
         })
     }
     const login=()=>{
-        const {email,password}=user
+        // const {email,password}=user
         axios.post("http://localhost:8000/login",user)
         .then(res=>alert(res.data.message));
     }
