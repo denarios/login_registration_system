@@ -18,8 +18,10 @@ const Login=()=>{
     }
     const login=()=>{
         // const {email,password}=user
-        axios.post("http://localhost:8000/login",user)
-        .then(res=>alert(res.data.message));
+        axios
+        .post("http://localhost:8000/login",user)
+        .then(res=>alert(res.data.message))
+        .catch(err => console.log(err));
     }
     return(
         <div className="login">
