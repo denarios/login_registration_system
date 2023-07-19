@@ -67,8 +67,6 @@ const Registration = () => {
       <div className="button" onClick={register}>
         Register
       </div>
-      <div>or</div>
-      <div className="button">Login</div>
     </div>
   );
 };

@@ -28,7 +28,7 @@ const Problem = () => {
         <thead>
           <tr>
           <th>Name</th>
-          <th>Description</th>
+          <th>ProblemLink</th>
           </tr>
         </thead>
         <tbody>

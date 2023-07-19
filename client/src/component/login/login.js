@@ -30,8 +30,6 @@ const Login=()=>{
         <input type="text" name="email" value ={user.email} placeholder="Your Eamil" onChange={handleChange}></input>
         <input type="password" name="password" value={user.password} placeholder="Your password" onChange={handleChange} ></input>
         <div className="button" onClick={login}>Login</div>
-        <div>or</div>
-        <div className="button">Register</div>
         </div>
     )
 }

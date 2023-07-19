@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 const UserData=({Users})=>{
     return(
         <>
@@ -6,7 +7,9 @@ const UserData=({Users})=>{
             return(
                 <tr>
                     <td>{currUserData.name}</td>
-                    <td>{currUserData.description}</td>
+                    <Link to={`/problem/${currUserData._id}`} className="link">
+                    <span className="postTitle">{currUserData._id}</span>
+                    </Link>
                 </tr>
             )
            })
