@@ -1,6 +1,5 @@
 import express from "express";
 import cors from "cors"
-import nodemon from "nodemon"
 import coderunRoute from "./routes/codeRun.js";
 import DBConnection from './database/db.js';
 import registrationRouter from "./routes/registration.js";
@@ -8,6 +7,8 @@ import loginRoute from "./routes/loginRoute.js";
 import addProblemRoute from "./routes/addProblems.js";
 import problemNameRouter from "./routes/problemname.js";
 import problemidNameRouter from "./routes/problem_id.js";
+import allProblemRoute from "./routes/getallProblem.js";
+import auth from "./middleware/auth.js";
 const app=express();
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
@@ -18,6 +19,7 @@ app.use("/",registrationRouter);
 app.use("/",addProblemRoute);
 app.use("/",problemNameRouter);
 app.use("/",problemidNameRouter);
+app.use("/",auth,allProblemRoute)
 app.use("/",coderunRoute)
 app.listen(8000, () => {
     console.log('server is running at port 8000');

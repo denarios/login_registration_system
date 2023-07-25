@@ -5,7 +5,7 @@ import Registration from './component/registration/registration';
 import Problem from './component/pages/problem';
 import AddProblem from './component/pages/AddProblem';
 import ProblemId from './component/pages/peoblem_Id';
-import Navigation from './component/navigation/navigation';
+import Compiler from './component/compiler/compiler';
 import { BrowserRouter as Router,Routes,Route} from "react-router-dom";
 function App() {
   return (
@@ -18,6 +18,7 @@ function App() {
           <Route path='/problem' element={<Problem/>}/>
           <Route path='/addproblem' element={<AddProblem/>}/>
           <Route path='/problem/:id' element={<ProblemId/>}/> 
+          <Route path='/run' element={<Compiler/>}/>
         </Routes>
       </Router>
     </div>
